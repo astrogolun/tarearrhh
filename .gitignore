@@ -1,2 +1,6 @@
-empleadosapp/__pycache__/models.cpython-38.pyc
-models.py
+empleadosapp/__pycache__/
+empleadosapp/migrations/__pycache__
+recursoshumanos/__pycache__/
+__pycache__
+x.py
+db.sqlite3

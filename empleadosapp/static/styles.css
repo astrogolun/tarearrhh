@@ -1,0 +1,83 @@
+/* Archivo styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+  
+  h1 {
+    background-color: #96c4c0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  
+  input[type="text"] {
+    width: 28%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  input[type="date"] {
+    width: 28%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color:#152b5c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1%;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #152b5c;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+
+/* Cambiar color de fondo */
+th {
+  background-color:#030303 ; /* Puedes usar cualquier color que desees */
+}
+
+/* Cambiar color de fuente */
+th {
+  color:#f0f0f0 ; /* Puedes usar cualquier color para el texto */
+  /* También puedes personalizar otras propiedades de fuente como font-size, font-weight, etc. */
+}

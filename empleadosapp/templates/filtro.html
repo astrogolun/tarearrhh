@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<table class="table">
+    <tr>
+        <th>Business Entity ID</th>
+        <th>National ID Number</th>
+        <th>Job Title</th>
+        <th>Hire Date</th>
+        <th>Vacation Hours</th>
+    </tr>
+    {% for employee in employees %}
+    <tr>
+        <td>{{ employee.businessentityid }}</td>
+        <td>{{ employee.nationalidnumber }}</td>
+        <td>{{ employee.jobtitle }}</td>
+        <td>{{ employee.hiredate }}</td>
+        <td>{{ employee.vacationhours }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
