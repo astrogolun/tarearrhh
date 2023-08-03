@@ -26,3 +26,31 @@ class Employee(models.Model):
          db_table = 'employee'
 
 
+# Crear el modelo de employeedepartmenthistory (hacerlo con inspect db > models.py)
+# ya que en este modelo estan las columnas startdate y enddate, que son parametros de filtro
+#ya termine la primera parte, voy en la segunda, de crear el filtro dinamico, recordar que
+#estoy en la rama second de git, crear esto en la rama segunda antes de sumarlo al proyecto principal en master.
+
+class Department(models.Model):
+    departmentid = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    groupname = models.CharField(max_length=50, blank=True, null=True)
+    modifieddate = models.DateTimeField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'department'
+
+
+class Employeedepartmenthistory(models.Model):
+    employeedepartmenthistoryid = models.AutoField(primary_key=True)
+    businessentityid = models.ForeignKey(Employee, models.DO_NOTHING, db_column='businessentityid', blank=True, null=True)
+    departmentid = models.ForeignKey(Department, models.DO_NOTHING, db_column='departmentid', blank=True, null=True)
+    shiftid = models.ForeignKey('Shift', models.DO_NOTHING, db_column='shiftid', blank=True, null=True)
+    startdate = models.DateField(blank=True, null=True)
+    enddate = models.DateField(blank=True, null=True)
+    modifieddate = models.DateTimeField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'employeedepartmenthistory'
