@@ -1,6 +1,33 @@
 
 {% extends 'base.html' %}
 {% block content %}
+
+<h1>Sistema de Departamentos</h1> 
+<h5 style="color:#20c997"> Bienvenido {{ user.username }} </h5> 
+<a href="{% url 'signin' %}">Logout</a>   
+{% comment %} Formulario de filtro {% endcomment %}
+{{ print }}
+<form method="post" action="{% url 'filtro' %}" class="row"> 
+    {% csrf_token %} 
+    {% comment %} {{ form.as_p }} {% endcomment %}
+    <div class="col">
+        {{ form.national_id_number }}
+    </div>
+    <div class="col">
+        {{ form.fecha_inicio }}
+    </div>
+    <div class="col">
+        {{ form.fecha_termino }}
+    </div>
+    <div class="col">
+        <button type="submit" class="btn btn-primary">Filtrar</button> <a href="{% url 'home' %}">Volver</a> 
+    </div> 
+    
+</form>
+
+{% comment %} Resultado del filtro {% endcomment %}
+
+{% if employees %}
 <table class="table">
     <tr>
         <th>Business Entity ID</th>
@@ -19,4 +46,7 @@
     </tr>
     {% endfor %}
 </table>
+{% else %}
+    <p>No se encontraron empleados con los parámetros ingresados.</p>
+{% endif %}
 {% endblock %}

@@ -36,17 +36,17 @@ body {
   }
   
   
-  input[type="text"] {
+  /* input[type="text"] {
     width: 28%;
     padding: 8px;
     margin-bottom: 10px;
-  }
+  } */
 
-  input[type="date"] {
+  /* input[type="date"] {
     width: 28%;
     padding: 8px;
     margin-bottom: 10px;
-  }
+  } */
   
   button[type="submit"] {
     background-color:#152b5c;

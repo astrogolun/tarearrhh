@@ -3,10 +3,12 @@ body {
     line-height: 1.6;
     margin: 20px;
   }
+
+ 
   
   h1 {
     background-color: #96c4c0;
-    color: #fff; /* Cambio el color del texto para que contraste mejor con el fondo */
+    color: #fff; 
     padding: 10px;
     border-bottom: 1px solid #ccc;
     border-radius: 3px;
@@ -23,7 +25,7 @@ body {
   
   th, td {
     padding: 12px; /* Aumento el padding para un mejor espaciado */
-    text-align: center; /* Alineo el texto en el centro de las celdas */
+    text-align: center !important; /* Alineo el texto en el centro de las celdas */
   }
   
   tr:nth-child(even) {
@@ -31,22 +33,22 @@ body {
   }
   
   form {
-    margin-top: 20px;
+    margin: 20px;
   }
   
-  input[type="text"],
+  /* input[type="text"],
   input[type="date"] {
     width: 29%; /* Aumento el ancho para ocupar todo el espacio disponible */
-    padding: 10px; /* Aumento el padding para un mejor aspecto */
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px; /* Agrego bordes redondeados para una apariencia más suave */
-  }
+    /* padding: 10px; /* Aumento el padding para un mejor aspecto */
+    /* margin-bottom: 10px; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; Agrego bordes redondeados para una apariencia más suave
+  /* } */ 
   
   button[type="submit"] {
     background-color: #152b5c;
     color: white;
-    padding: 10px 20px;
+    padding: 7px 16px;
     border: none;
     cursor: pointer;
     border-radius: 5px; /* Cambio el porcentaje a un valor absoluto para bordes redondeados */

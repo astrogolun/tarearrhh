@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+    <h1>Sign Up</h1>
+    <h4 style="color:brown;">{{ error }}</h4> 
+    <form class="" action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit" class="btn btn-primary"> Sign up</button> <p>  </p><a href="{% url 'signin' %}">¿Ya estas registrado? Ingresa aquí </a>
+    </form>
+{% endblock %}    
+

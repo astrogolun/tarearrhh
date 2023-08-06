@@ -1,6 +1,38 @@
 
     {% extends 'base.html' %}
     {% block content %}
+    <h1>Sistema de Departamentos</h1> 
+    <ul>
+        <li>
+            <h5 style="color:#20c997"> Bienvenido {{ user.username }} </h5> 
+        </li>
+        <li>
+            <a id="logout" href="{% url 'signin' %}">Logout</a> 
+        </li>
+    </ul>
+    
+    
+    {% comment %} Formulario de Filtro {% endcomment %}
+    <form method="post" action="{% url 'filtro' %}" class="row" > 
+        {% csrf_token %}
+        <!-- {{ form.as_p}} -->
+
+        <!-- Opcion 2 de formulario -->
+        <div class="col">
+            {{ form.national_id_number }}
+        </div>
+        <div class="col">
+            {{ form.fecha_inicio }}
+        </div>
+        <div class="col">
+            {{ form.fecha_termino }}
+        </div>
+        <div class="col"> 
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </div>
+         
+    </form>
+
     <table class="table">
         <tr>
             <th>Business Entity ID</th>
