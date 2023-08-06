@@ -11,7 +11,9 @@
         </li>
     </ul>
     
-    
+    <h6 style="color:brown;">{{ error }}</h6> 
+    <h6 style="color:brown;">{{ error_ }}</h6> 
+
     {% comment %} Formulario de Filtro {% endcomment %}
     <form method="post" action="{% url 'filtro' %}" class="row" > 
         {% csrf_token %}

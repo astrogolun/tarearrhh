@@ -1,0 +1,27 @@
+Realizar consultas. Tengo la 1, y la 3. Falta la N 2. 
+--Listado de departamentos de la organización
+
+SELECT * FROM department;
+SELECT departmentid, name, groupname
+FROM public.department;
+
+--Listado de empleados que han trabajado en más
+de un departamento
+
+SELECT
+    businessentityid,
+    COUNT(DISTINCT departmentid) AS cantidad_departamentos
+FROM
+    employeedepartmenthistory
+GROUP BY
+    businessentityid
+HAVING
+    COUNT(DISTINCT departmentid) > 1;
+
+--Cantidad de trabajadores por turno
+
+SELECT s.shiftid, s.name AS shift_name, COUNT(e.businessentityid) AS cantidad_trabajadores
+FROM public.employeedepartmenthistory edh
+JOIN public.employee e ON edh.businessentityid = e.businessentityid
+JOIN public.shift s ON edh.shiftid = s.shiftid
+GROUP BY s.shiftid, s.name;

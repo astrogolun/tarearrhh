@@ -4,7 +4,8 @@
 
 <h1>Sistema de Departamentos</h1> 
 <h5 style="color:#20c997"> Bienvenido {{ user.username }} </h5> 
-<a href="{% url 'signin' %}">Logout</a>   
+<a href="{% url 'signin' %}">Logout</a>  
+
 {% comment %} Formulario de filtro {% endcomment %}
 {{ print }}
 <form method="post" action="{% url 'filtro' %}" class="row"> 
