@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-
 class Employee(models.Model):
      businessentityid = models.IntegerField(primary_key=True)
      nationalidnumber = models.CharField(max_length=15)

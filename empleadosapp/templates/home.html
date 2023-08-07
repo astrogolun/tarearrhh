@@ -17,9 +17,7 @@
     {% comment %} Formulario de Filtro {% endcomment %}
     <form method="post" action="{% url 'filtro' %}" class="row" > 
         {% csrf_token %}
-        <!-- {{ form.as_p}} -->
 
-        <!-- Opcion 2 de formulario -->
         <div class="col">
             {{ form.national_id_number }}
         </div>
@@ -31,10 +29,8 @@
         </div>
         <div class="col"> 
             <button type="submit" class="btn btn-primary">Filtrar</button>
-        </div>
-         
+        </div>        
     </form>
-
     <table class="table">
         <tr>
             <th>Business Entity ID</th>
